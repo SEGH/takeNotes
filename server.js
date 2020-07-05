@@ -5,30 +5,30 @@ const PORT = 3000;
 const fs = require("fs");
 
 // Body Parsing Middleware
-app.use(express.urlencoded({ extended: true}));
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // Serve static assets
 app.use(express.static('public'));
 
 // HTML Routes
-app.get("/", function(req, res) {
+app.get("/", function (req, res) {
     res.sendFile(__dirname + "/public/index.html");
 });
 
-app.get("/notes", function(req, res) {
+app.get("/notes", function (req, res) {
     res.sendFile(__dirname + "/public/notes.html");
 });
 
 // API Routes
-app.get("/api/notes", function(req, res) {
+app.get("/api/notes", function (req, res) {
     res.sendFile(__dirname + "/db/db.json");
 });
 
-app.post("/api/notes", function(req, res) {
+app.post("/api/notes", function (req, res) {
     let newNote = req.body;
 
-    fs.readFile(__dirname + '/db/db.json', "utf8", function(err, data) {
+    fs.readFile(__dirname + '/db/db.json', "utf8", function (err, data) {
         if (err) {
             console.log(err);
         } else {
@@ -37,13 +37,13 @@ app.post("/api/notes", function(req, res) {
             let idArray = [];
             noteArray.forEach(item => idArray.push(item.id));
             idArray.sort();
-            let newId = idArray[idArray.length -1] + 1;
+            let newId = idArray[idArray.length - 1] + 1;
             newNote.id = newId;
             console.log(newNote);
-            
+
             noteArray.push(newNote);
 
-            fs.writeFile(__dirname + '/db/db.json', JSON.stringify(noteArray), function(err) {
+            fs.writeFile(__dirname + '/db/db.json', JSON.stringify(noteArray), function (err) {
                 if (err) {
                     return console.log(err);
                 }
@@ -53,7 +53,37 @@ app.post("/api/notes", function(req, res) {
     });
 });
 
+app.delete("/api/notes/:id", function (req, res) {
+    let search = req.params;
+    console.log(search.id);
+
+    fs.readFile(__dirname + '/db/db.json', "utf8", function (err, data) {
+        if (err) {
+            console.log(err);
+        } else {
+            // Delete object from array and json file
+            
+            currentArray = JSON.parse(data);
+
+            let newArray = currentArray.filter(item => {
+                if (item.id != search.id) {
+                    return item
+                }
+            });
+            console.log(newArray);
+
+            fs.writeFile(__dirname + '/db/db.json', JSON.stringify(newArray), function (err) {
+                if (err) {
+                    return console.log(err);
+                }
+                console.log("Success! Note deleted");
+            });
+
+        }
+    });
+});
+
 // Server listener
-app.listen(PORT, function() {
+app.listen(PORT, function () {
     console.log("Server is listening on: http://localhost:" + PORT);
 });
