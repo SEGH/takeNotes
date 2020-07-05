@@ -37,10 +37,14 @@ app.post("/api/notes", function (req, res) {
             let idArray = [];
             noteArray.forEach(item => idArray.push(item.id));
             idArray.sort();
-            let newId = idArray[idArray.length - 1] + 1;
-            newNote.id = newId;
-            console.log(newNote);
-
+            console.log(idArray.length);
+            if (idArray.length === 0) {
+                newNote.id = 1;
+            } else {
+                let newId = idArray[idArray.length - 1] + 1;
+                newNote.id = newId;
+                console.log(newNote);
+            }
             noteArray.push(newNote);
 
             fs.writeFile(__dirname + '/db/db.json', JSON.stringify(noteArray), function (err) {
