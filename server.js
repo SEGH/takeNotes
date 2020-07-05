@@ -27,13 +27,22 @@ app.get("/api/notes", function(req, res) {
 
 app.post("/api/notes", function(req, res) {
     let newNote = req.body;
-    console.log(newNote);
+
     fs.readFile(__dirname + '/db/db.json', "utf8", function(err, data) {
         if (err) {
             console.log(err);
         } else {
             noteArray = JSON.parse(data);
+            // Create unique id for new note
+            let idArray = [];
+            noteArray.forEach(item => idArray.push(item.id));
+            idArray.sort();
+            let newId = idArray[idArray.length -1] + 1;
+            newNote.id = newId;
+            console.log(newNote);
+            
             noteArray.push(newNote);
+
             fs.writeFile(__dirname + '/db/db.json', JSON.stringify(noteArray), function(err) {
                 if (err) {
                     return console.log(err);
