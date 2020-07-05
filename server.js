@@ -47,6 +47,7 @@ app.post("/api/notes", function (req, res) {
                 if (err) {
                     return console.log(err);
                 }
+                res.sendFile(__dirname + "/db/db.json");
                 console.log("Success! Note added");
             });
         }
@@ -62,7 +63,7 @@ app.delete("/api/notes/:id", function (req, res) {
             console.log(err);
         } else {
             // Delete object from array and json file
-            
+
             currentArray = JSON.parse(data);
 
             let newArray = currentArray.filter(item => {
@@ -76,6 +77,7 @@ app.delete("/api/notes/:id", function (req, res) {
                 if (err) {
                     return console.log(err);
                 }
+                res.sendFile(__dirname + "/db/db.json");
                 console.log("Success! Note deleted");
             });
 
