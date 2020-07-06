@@ -11,15 +11,6 @@ app.use(express.json());
 // Serve static assets
 app.use(express.static('public'));
 
-// HTML Routes
-app.get("/notes", function (req, res) {
-    res.sendFile(__dirname + "/public/notes.html");
-});
-
-app.get("*", function (req, res) {
-    res.sendFile(__dirname + "/public/index.html");
-});
-
 // API Routes
 app.get("/api/notes", function (req, res) {
     res.sendFile(__dirname + "/db/db.json");
@@ -87,6 +78,15 @@ app.delete("/api/notes/:id", function (req, res) {
 
         }
     });
+});
+
+// HTML Routes
+app.get("/notes", function (req, res) {
+    res.sendFile(__dirname + "/public/notes.html");
+});
+
+app.get("*", function (req, res) {
+    res.sendFile(__dirname + "/public/index.html");
 });
 
 // Server listener
