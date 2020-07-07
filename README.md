@@ -22,51 +22,39 @@
 
   * Navigating to the homepage in the browser, the user sees a description of the Note Taker and a button to "Get Started"
 
-<div style="display: flex; flex-direction: row">
-<div style="display: flex; flex-direction: column; align-items: center; font-size:80%; text-align:center; padding: .5em;"><span>375 px</span><img src="./public/assets/images/375start.png" alt="375px screenshot" width="150" height="height" style="padding-top:0.5em;" /></div>
-<div style="display: flex; flex-direction: column; align-items: center; font-size:80%; text-align:center; padding: .5em;"><span>768 px</span><img src="./public/assets/images/768start.png" alt="768px screenshot" width="200" height="height" style="padding-top:0.5em;" /></div>
-<div style="display: flex; flex-direction: column; align-items: center; font-size:80%; text-align:center; padding: .5em;"><span>1025 px</span><img src="./public/assets/images/1025start.png" alt="1025px screenshot" width="250" height="height" style="padding-top:0.5em;" /></div>
-</div>
+<img src="./public/assets/images/375start.png" alt="375px screenshot" width="150" />
+<img src="./public/assets/images/768start.png" alt="768px screenshot" width="200" />
+<img src="./public/assets/images/1025start.png" alt="1025px screenshot" width="250" />
 
   * Clicking the button will take them to the notes page where any saved note titles will be automatically displayed in a list or "No saved Notes" will display
 
-<div style="display: flex; flex-direction: row">
-<div style="display: flex; flex-direction: column; align-items: center; font-size:80%; text-align:center; padding: .5em;"><span>375 px</span><img src="./public/assets/images/375empty.png" alt="375px screenshot" width="150" height="height" style="padding-top:0.5em;" /></div>
-<div style="display: flex; flex-direction: column; align-items: center; font-size:80%; text-align:center; padding: .5em;"><span>768 px</span><img src="./public/assets/images/768empty.png" alt="768px screenshot" width="200" height="height" style="padding-top:0.5em;" /></div>
-<div style="display: flex; flex-direction: column; align-items: center; font-size:80%; text-align:center; padding: .5em;"><span>1025 px</span><img src="./public/assets/images/1025empty.png" alt="1025px screenshot" width="250" height="height" style="padding-top:0.5em;" /></div>
-</div>
+<img src="./public/assets/images/375empty.png" alt="375px screenshot" width="150" />
+<img src="./public/assets/images/768empty.png" alt="768px screenshot" width="200" />
+<img src="./public/assets/images/1025empty.png" alt="1025px screenshot" width="250" />
 
   * The user can create a new note by filling in the Note Title input and Note Text input. When both of these fields have text, a Save icon will appear that once clicked will save the note to the json file.
 
-<div style="display: flex; flex-direction: row">
-<div style="display: flex; flex-direction: column; align-items: center; font-size:80%; text-align:center; padding: .5em;"><span>375 px</span><img src="./public/assets/images/375create.png" alt="375px screenshot" width="150" height="height" style="padding-top:0.5em;" /></div>
-<div style="display: flex; flex-direction: column; align-items: center; font-size:80%; text-align:center; padding: .5em;"><span>768 px</span><img src="./public/assets/images/768create.png" alt="768px screenshot" width="200" height="height" style="padding-top:0.5em;" /></div>
-<div style="display: flex; flex-direction: column; align-items: center; font-size:80%; text-align:center; padding: .5em;"><span>1025 px</span><img src="./public/assets/images/1025create.png" alt="1025px screenshot" width="250" height="height" style="padding-top:0.5em;" /></div>
-</div>
+<img src="./public/assets/images/375create.png" alt="375px screenshot" width="150" />
+<img src="./public/assets/images/768create.png" alt="768px screenshot" width="200" />
+<img src="./public/assets/images/1025create.png" alt="1025px screenshot" width="250" />
 
   * Clicking on the note title will display the contents of that note
 
-<div style="display: flex; flex-direction: row">
-<div style="display: flex; flex-direction: column; align-items: center; font-size:80%; text-align:center; padding: .5em;"><span>375 px</span><img src="./public/assets/images/375show.png" alt="375px screenshot" width="150" height="height" style="padding-top:0.5em;" /></div>
-<div style="display: flex; flex-direction: column; align-items: center; font-size:80%; text-align:center; padding: .5em;"><span>768 px</span><img src="./public/assets/images/768show.png" alt="768px screenshot" width="200" height="height" style="padding-top:0.5em;" /></div>
-<div style="display: flex; flex-direction: column; align-items: center; font-size:80%; text-align:center; padding: .5em;"><span>1025 px</span><img src="./public/assets/images/1025show.png" alt="1025px screenshot" width="250" height="height" style="padding-top:0.5em;" /></div>
-</div>
+<img src="./public/assets/images/375show.png" alt="375px screenshot" width="150" />
+<img src="./public/assets/images/768show.png" alt="768px screenshot" width="200" />
+<img src="./public/assets/images/1025show.png" alt="1025px screenshot" width="250" />
 
   * If a saved note is currently being displayed, clicking the pencil icon will display input fields to create a new note
 
-<div style="display: flex; flex-direction: row">
-<div style="display: flex; flex-direction: column; align-items: center; font-size:80%; text-align:center; padding: .5em;"><span>375 px</span><img src="./public/assets/images/375new.png" alt="375px screenshot" width="150" height="height" style="padding-top:0.5em;" /></div>
-<div style="display: flex; flex-direction: column; align-items: center; font-size:80%; text-align:center; padding: .5em;"><span>768 px</span><img src="./public/assets/images/768new.png" alt="768px screenshot" width="200" height="height" style="padding-top:0.5em;" /></div>
-<div style="display: flex; flex-direction: column; align-items: center; font-size:80%; text-align:center; padding: .5em;"><span>1025 px</span><img src="./public/assets/images/1025new.png" alt="1025px screenshot" width="250" height="height" style="padding-top:0.5em;" /></div>
-</div>
+<img src="./public/assets/images/375new.png" alt="375px screenshot" width="150" />
+<img src="./public/assets/images/768new.png" alt="768px screenshot" width="200" />
+<img src="./public/assets/images/1025new.png" alt="1025px screenshot" width="250" />
 
   * Clicking on the red trashcan will delete that note by referencing its id number in the json object array
 
-<div style="display: flex; flex-direction: row">
-<div style="display: flex; flex-direction: column; align-items: center; font-size:80%; text-align:center; padding: .5em;"><span>375 px</span><img src="./public/assets/images/375delete.png" alt="375px screenshot" width="150" height="height" style="padding-top:0.5em;" /></div>
-<div style="display: flex; flex-direction: column; align-items: center; font-size:80%; text-align:center; padding: .5em;"><span>768 px</span><img src="./public/assets/images/768delete.png" alt="768px screenshot" width="200" height="height" style="padding-top:0.5em;" /></div>
-<div style="display: flex; flex-direction: column; align-items: center; font-size:80%; text-align:center; padding: .5em;"><span>1025 px</span><img src="./public/assets/images/1025delete.png" alt="1025px screenshot" width="250" height="height" style="padding-top:0.5em;" /></div>
-</div>
+<img src="./public/assets/images/375delete.png" alt="375px screenshot" width="150" />
+<img src="./public/assets/images/768delete.png" alt="768px screenshot" width="200" />
+<img src="./public/assets/images/1025delete.png" alt="1025px screenshot" width="250" />
 
   ## License
   Licensed under the [Unlicense](https://unlicense.org) license.
