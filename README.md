@@ -23,6 +23,7 @@
   * Navigating to the homepage in the browser, the user sees a description of the Note Taker and a button to "Get Started"
 
 <img src="./public/assets/images/375start.png" alt="375px screenshot" width="150" /><img src="./public/assets/images/768start.png" alt="768px screenshot" width="200" /><img src="./public/assets/images/1025start.png" alt="1025px screenshot" width="250" />
+
 Screenshots at 375px, 768px, 1025px
 
   * Clicking the button will take them to the notes page where any saved note titles will be automatically displayed in a list or "No saved Notes" will display
