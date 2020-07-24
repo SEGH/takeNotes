@@ -2,7 +2,7 @@
 
   [![license](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)
 
-  * [Deployed Site](https://warm-lowlands-22639.herokuapp.com/)
+  * [Deployed Site](https://takenotes-22639.herokuapp.com)
 
   ## Description
   This is an application that runs in the browser and uses Express to create, save, and delete notes to a JSON file on the backend. User input is posted as objects to an API route and pushed to an array that is written in a JSON file. Bootstrap is used to style the user interface and make it responsive at different screen sizes.
