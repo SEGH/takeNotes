@@ -4,6 +4,10 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 const fs = require("fs");
 
+//Favicon middleware
+const favicon = require("serve-favicon");
+app.use(favicon(__dirname + "/public/favicon.ico"));
+
 // Body Parsing Middleware
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
